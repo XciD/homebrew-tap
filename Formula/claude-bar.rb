@@ -6,7 +6,6 @@ class ClaudeBar < Formula
   license "MIT"
 
   depends_on :macos
-  depends_on xcode: ["14.0", :build]
 
   def install
     system "make"
