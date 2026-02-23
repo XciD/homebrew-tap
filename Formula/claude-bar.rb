@@ -12,15 +12,12 @@ class ClaudeBar < Formula
     prefix.install "build/ClaudeUsageBar.app"
   end
 
-  def post_install
-    system "ln", "-sf", "#{prefix}/ClaudeUsageBar.app", "/Applications/ClaudeUsageBar.app"
-  end
-
   def caveats
     <<~EOS
-      ClaudeUsageBar.app has been linked to /Applications.
+      To link to /Applications (required for Launch at Login):
+        ln -sf #{opt_prefix}/ClaudeUsageBar.app /Applications/ClaudeUsageBar.app
 
-      To start it, run:
+      Then start it with:
         open /Applications/ClaudeUsageBar.app
     EOS
   end
