@@ -13,19 +13,15 @@ class ClaudeBar < Formula
   end
 
   def post_install
-    mkdir_p "#{Dir.home}/Applications"
-    ln_sf "#{prefix}/ClaudeUsageBar.app", "#{Dir.home}/Applications/ClaudeUsageBar.app"
+    system "ln", "-sf", "#{prefix}/ClaudeUsageBar.app", "/Applications/ClaudeUsageBar.app"
   end
 
   def caveats
     <<~EOS
-      ClaudeUsageBar.app has been linked to ~/Applications.
+      ClaudeUsageBar.app has been linked to /Applications.
 
       To start it, run:
-        open ~/Applications/ClaudeUsageBar.app
-
-      For Launch at Login support, also link to /Applications:
-        ln -sf #{prefix}/ClaudeUsageBar.app /Applications/
+        open /Applications/ClaudeUsageBar.app
     EOS
   end
 end
