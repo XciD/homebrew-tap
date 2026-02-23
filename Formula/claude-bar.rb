@@ -1,8 +1,8 @@
 class ClaudeBar < Formula
   desc "macOS menu bar app for monitoring Claude API usage"
   homepage "https://github.com/XciD/claude-bar"
-  url "https://github.com/XciD/claude-bar/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "9d14a9d2089c93de10fd2c88be77cea0daaa4d9c90b59e3e9640a5ea08950e97"
+  url "https://github.com/XciD/claude-bar/archive/refs/tags/v1.1.0.tar.gz"
+  sha256 "b59e3bbb773863ee5c9ec62d1fc5f0992de592f32e6207d7b863a1c94126ee5c"
   license "MIT"
 
   depends_on :macos
@@ -14,8 +14,8 @@ class ClaudeBar < Formula
 
   def caveats
     <<~EOS
-      To link to /Applications (required for Launch at Login):
-        ln -sf #{opt_prefix}/ClaudeUsageBar.app /Applications/ClaudeUsageBar.app
+      Copy to /Applications (required for Launch at Login and app icon):
+        cp -R #{opt_prefix}/ClaudeUsageBar.app /Applications/
 
       Then start it with:
         open /Applications/ClaudeUsageBar.app
