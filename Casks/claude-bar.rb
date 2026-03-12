@@ -1,6 +1,6 @@
 cask "claude-bar" do
-  version "1.4.2"
-  sha256 "2840c02263fca69881c2509d3f60f34e697697b75b735979540379490c8977b9"
+  version "1.4.3"
+  sha256 "299c147070f6d617c46536da69a623eb4ba3b2fa4b1f9124c5bf15a8a9afef3e"
 
   url "https://github.com/XciD/claude-bar/releases/download/v#{version}/ClaudeUsageBar.zip"
   name "Claude Usage Bar"
