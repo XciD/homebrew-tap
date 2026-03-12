@@ -1,8 +1,8 @@
 class ClaudeBar < Formula
   desc "macOS menu bar app for monitoring Claude API usage"
   homepage "https://github.com/XciD/claude-bar"
-  url "https://github.com/XciD/claude-bar/archive/refs/tags/v1.2.0.tar.gz"
-  sha256 "d7d5df6e81c01610443134f955a9564b66d621c65c1fd8b8994e06e5c862f9b2"
+  url "https://github.com/XciD/claude-bar/archive/refs/tags/v1.3.0.tar.gz"
+  sha256 "9ea8a6470089df7e9a5bc7b7f6cbd3dcff175f649acd850c35aea8f74eb2b827"
   license "MIT"
 
   depends_on :macos
