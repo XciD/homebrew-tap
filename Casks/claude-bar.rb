@@ -13,6 +13,8 @@ cask "claude-bar" do
 
   postflight do
     system_command "/usr/bin/xattr", args: ["-cr", "#{appdir}/ClaudeUsageBar.app"]
+    system_command "/usr/bin/killall", args: ["ClaudeUsageBar"], must_succeed: false
+    system_command "/usr/bin/open", args: ["#{appdir}/ClaudeUsageBar.app"]
   end
 
   zap trash: [
