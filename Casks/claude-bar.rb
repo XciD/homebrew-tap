@@ -9,7 +9,7 @@ cask "claude-bar" do
 
   depends_on macos: ">= :ventura"
 
-  app "ClaudeUsageBar.app"
+  app "ClaudeUsageBar.app", no_quarantine: true
 
   zap trash: [
     "~/Library/Preferences/com.xcid.claude-usage-bar.plist",
