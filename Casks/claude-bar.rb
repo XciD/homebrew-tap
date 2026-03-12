@@ -9,7 +9,11 @@ cask "claude-bar" do
 
   depends_on macos: ">= :ventura"
 
-  app "ClaudeUsageBar.app", no_quarantine: true
+  app "ClaudeUsageBar.app"
+
+  postflight do
+    system_command "/usr/bin/xattr", args: ["-cr", "#{appdir}/ClaudeUsageBar.app"]
+  end
 
   zap trash: [
     "~/Library/Preferences/com.xcid.claude-usage-bar.plist",
